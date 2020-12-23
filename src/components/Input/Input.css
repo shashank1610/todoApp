@@ -1,0 +1,9 @@
+.todoInput {
+    align-self: center;
+  }
+  
+  .todoAdd {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
