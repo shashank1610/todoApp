@@ -1,20 +1,16 @@
-import React from 'react';
-import './Tasks.css';
-
-interface Tasks {
-    tasks: string[]
-}
-const Tasks: React.FunctionComponent<Tasks> = (props) => {
-    return (
-        <div className ="todoTasks">
-            <ul>
-                {
-                    props.tasks.map(el => <li>{el}</li>)
-                }
-            </ul>
-
-        </div>
-    )
-}
+import React from "react";
+import "./Tasks.css";
+import { ITasks, ITask } from "../../containers/App/App";
+const Tasks: React.FunctionComponent<ITasks> = (props) => {
+  return (
+    <div className="todoTasks">
+      <ul>
+        {props.tasks.map((el) => (
+          <li id={el.id}>{el.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 export default Tasks;
